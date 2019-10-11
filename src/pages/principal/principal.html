@@ -1,0 +1,99 @@
+<!--
+  Generated template for the PrincipalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<!-- <ion-header>
+
+    <ion-navbar>
+      <ion-title>Principal</ion-title>
+    </ion-navbar>
+  
+  </ion-header> -->
+
+  <!-- <ion-menu [content]="content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Perfil</ion-title> 
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item text-center>
+          
+        </ion-item>
+    
+        <ion-item>{{ user.nombre }}</ion-item>
+        <ion-item>{{ user.email }}</ion-item> 
+        <ion-item>{{ user.uid }}</ion-item>
+        <ion-item>{{ user.provider }}</ion-item>
+        <ion-item>
+          <button ion-button color="principal" (click)="salir()">
+            Salir
+          </button>
+        </ion-item>
+      </ion-list> 
+      
+    </ion-content>
+  </ion-menu>
+  <ion-nav #content ></ion-nav> --> 
+
+      <ion-menu [content]="content">
+        <ion-header>
+          <ion-toolbar id="menutoolbar">
+            <ion-item id="menuProfile" menuClose >
+              
+                <img alt="" src="../assets/imgs/logo.png">
+              
+            </ion-item>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-list id="menulist">
+
+            <button ion-item>
+            <ion-icon name="contact" item-start></ion-icon>
+              Ver Perfil
+            </button>
+            <button ion-item>
+            <ion-icon name="log-out" item-start (click)="salir()"></ion-icon>
+              Salir
+            </button>
+          </ion-list>
+
+        </ion-content>
+      </ion-menu>
+       <ion-nav #content></ion-nav>
+       
+
+<ion-content>
+
+
+
+  
+
+  <ion-row class="centrado" text-center>
+    <ion-col>
+        <button ion-button color="principal" class="round2" [navPush]="casas">
+            <ion-icon name="logo-google"></ion-icon>
+            <span>ESCOGE TU CASA</span>
+        </button>
+    </ion-col>  
+  </ion-row>
+
+  <ion-row text-center>
+      <ion-col>
+          <button ion-button color="principal" class="round3" (click)="downloadAndOpenPdf()"> 
+              <ion-icon name="logo-google"></ion-icon>
+              <span>CONOCE OC</span>
+          </button>
+      </ion-col>
+    </ion-row>
+
+
+
+
+</ion-content>

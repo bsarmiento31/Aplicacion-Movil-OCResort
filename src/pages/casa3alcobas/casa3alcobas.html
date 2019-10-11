@@ -1,0 +1,102 @@
+<!--
+  Generated template for the Casa3alcobasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on 
+  Ionic pages and navigation.
+-->
+<ion-header> 
+
+  <ion-navbar>
+    <ion-title>Casa de 2 pisos 3 alcobas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+ 
+
+<ion-content padding>
+
+
+    <ion-row>
+        <ion-slides effect="fade" direction="horizontal" speed="800" loop="true">
+              <ion-slide *ngFor="let slider of slider3alcobas">
+                  <div style="position: absolute;top: 55%;left: 16px;font-size: 25px;z-index: 2;color:white;" (click)="slidePrev()">
+                      <ion-icon name="arrow-back"></ion-icon>
+                    </div>
+                    <div style="position: absolute;top: 55%;right: 16px;font-size: 25px;z-index: 2;color:white;" (click)="slideNext()">
+                      <ion-icon name="arrow-forward"></ion-icon>
+                    </div>
+                <ion-toolbar end></ion-toolbar>
+                  <img [src]="slider.image">
+              </ion-slide>
+             
+        </ion-slides>
+        <p>Area de construcción 159,30 mts2<br>
+          2 Alcobas | 2 Baños<br>
+        </p>
+        
+      </ion-row> 
+
+      <ion-row>
+        <ion-col>
+            <p class="titulo">Planta Ambientada</p>
+            <img src="assets/imgs/3alcobas/planta1.jpg">
+            <p class="titulo">Area Privada Primer Piso</p>
+            <ion-row>
+                
+                <ion-col col-6>
+                <ul>
+                    <li>Alcoba con baño</li>
+                    <li>Baño Piscina</li>
+                    <li>Sala</li>
+                    <li>Cocina y pantry</li>
+                    <li>Zona de labores</li>
+               </ul>
+              </ion-col>
+              <ion-col col-6>
+                  <ul>
+                      <li>Zonas verdes</li>
+                      <li>2 parqueaderos privados</li>
+                      <li>B.B.Q (Opcional)</li>
+                      <li>Piscina(opcional)</li>
+                 </ul>
+                </ion-col>
+            </ion-row>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+          <ion-col>
+              <img src="assets/imgs/2alcobasmasterraza/planta2.jpg">
+              <ion-row>
+                   
+                  <ion-col col-12>
+                      <p class="titulo">Area Privada Segundo Piso</p>
+                  <ul>
+                      <li>2 Alcobas</li>
+                      <li>2 Baños</li>
+                      <li>Sala TV</li>
+                      <li>Balcón</li>
+                 </ul>
+                </ion-col>
+              </ion-row>
+          </ion-col>
+      </ion-row>
+
+      
+
+      <ion-row>
+        <ion-col>
+            <h3>Valor $336.000.000</h3>
+        </ion-col>
+        
+      </ion-row>
+      <ion-row>
+          <ion-col col-3></ion-col>
+          <ion-col col-6>
+              <button ion-button block color="botones" class="round2"><span>Escoge tu ubicación</span></button>
+          </ion-col>
+          <ion-col col-3></ion-col>
+      
+      </ion-row>
+
+</ion-content>

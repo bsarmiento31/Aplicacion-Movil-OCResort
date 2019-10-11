@@ -1,0 +1,10 @@
+export { LoginPage } from './login/login';
+export { RegistrarPage } from './registrar/registrar';
+export { PrincipalPage } from './principal/principal';
+export { CasasPage } from './casas/casas';
+export { InfocasasPage } from './infocasas/infocasas';
+export { Casa2alcobasterrazaPage } from './casa2alcobasterraza/casa2alcobasterraza';
+export { Casa3alcobasPage } from './casa3alcobas/casa3alcobas';
+export { Casa3alcobasterrazaPage } from './casa3alcobasterraza/casa3alcobasterraza';
+export { Casa4alcobasPage } from './casa4alcobas/casa4alcobas';
+export { OlvidarPassPage } from './olvidar-pass/olvidar-pass';

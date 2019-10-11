@@ -1,0 +1,132 @@
+<!--
+  Generated template for the RegistrarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>registrar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label floating>Email Address</ion-label>
+          <ion-input type="text" [(ngModel)]="user.email"></ion-input>  
+      </ion-item>
+  
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+          <ion-input type="password" [(ngModel)]="user.password"></ion-input>   
+      </ion-item>
+
+
+      <button ion-button (click)="register(user)">Registrar</button>
+
+</ion-content> -->
+<ion-header no-border>
+    <ion-navbar no-border-bottom color="header">
+      <ion-title>
+        
+      </ion-title>
+    </ion-navbar>
+
+    <ion-row text-center color="header">
+        <ion-col>
+
+            <img src="../assets/imgs/logo2.png" class="top-10">
+            
+          </ion-col>
+    </ion-row>
+  
+    <ion-toolbar no-border-top>
+      <ion-segment [(ngModel)]="category">
+        <ion-segment-button value="movies">
+          Registrarse
+        </ion-segment-button>
+        <ion-segment-button value="tvshows">
+          Login
+        </ion-segment-button>
+        <!-- <ion-segment-button value="animated">
+          Animated
+        </ion-segment-button> -->
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header> 
+  
+  <ion-content class="masters">
+    <div [ngSwitch]="category" swipeSegment [tabsList]="categories" [(currentTab)]="category" (tabChanged)="onTabChanged($event)" class="swipe-area">
+      <ion-list *ngSwitchCase="'movies'">
+          <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+          <ion-row text-center class="form">
+            
+          
+          <ion-item class="mastersmargin">
+              <ion-label color="primary"><ion-icon item-left name="lock" color="label"></ion-icon></ion-label>
+              <ion-input placeholder="Nombre" [(ngModel)]="usuario.nombre" name="nombre" type="text" required minLenght="2"></ion-input>
+          </ion-item>
+          <ion-label color="light" *ngIf="f.submitted && f.controls['nombre'].errors">El nombre es obligatorio</ion-label>
+          <ion-item class="mastersmargin">
+              <ion-label color="primary"><ion-icon item-left name="lock" color="label"></ion-icon></ion-label>
+              <ion-input placeholder="Telefono" [(ngModel)]="usuario.telefono" name="telefono" type="text" required minLenght="2"></ion-input>
+          </ion-item>
+          <ion-label color="light" *ngIf="f.submitted && f.controls['telefono'].errors">El telefono es obligatorio</ion-label>
+          <ion-item class="mastersmargin">
+              <ion-label color="primary"><ion-icon item-left name="mail" color="label"></ion-icon></ion-label>
+              <ion-input placeholder="email" type="email" [(ngModel)]="usuario.email" name="email" required email></ion-input>
+            </ion-item>
+            <ion-label color="light" *ngIf="f.submitted && f.controls['email'].errors">El Correo es obligatorio</ion-label>
+          <ion-item class="mastersmargin">
+              <ion-label color="primary"><ion-icon item-left name="lock" color="label"></ion-icon></ion-label>
+              <ion-input placeholder="Contraseña" [(ngModel)]="usuario.password" type="password" name="password" required minLenght="6"></ion-input>
+          </ion-item>
+          <ion-label color="light" *ngIf="f.submitted && f.controls['password'].errors">Al menos 6 caracteres</ion-label>
+
+          <button ion-button block color="header" class="buttontop" type="submit">Registrar</button>
+      
+          </ion-row> 
+        </form> 
+      </ion-list>  
+  
+      <ion-list *ngSwitchCase="'tvshows'">
+          <form (ngSubmit)="onSubmitLogin(l)" #l="ngForm">
+          <ion-row text-center class="form">
+              <ion-item class="mastersmargin">
+                  <ion-label color="primary"><ion-icon item-left name="mail" color="label"></ion-icon></ion-label>
+                  <ion-input placeholder="Email Address" [(ngModel)]="usuario.email" type="text" name="email" required></ion-input>
+              </ion-item>
+              <ion-label color="light" *ngIf="l.submitted && l.controls['email'].errors">El email es obligatorio</ion-label>
+
+              <ion-item class="mastersmargin">
+                  <ion-label color="primary"><ion-icon item-left name="lock" color="label"></ion-icon></ion-label>
+                  <ion-input placeholder="Contraseña" type="password" [(ngModel)]="usuario.password" name="password" required minLenght="6"></ion-input>
+              </ion-item>
+              <ion-label color="light" *ngIf="l.submitted && l.controls['password'].errors">Al menos 6 caracteres</ion-label>
+
+          
+              <button ion-button block color="header" class="buttontop">Login</button>
+          </ion-row>
+        </form>
+          <p class="olvidaste"  (click)="irOlvidarcontrasena()">Olvidastes tu contraseña?</p>
+
+      </ion-list> 
+  
+      <!-- <ion-list *ngSwitchCase="'animated'"> 
+        <ion-item>
+          Ice Age
+        </ion-item>
+        <ion-item>
+          Lion King
+        </ion-item>
+        <ion-item>
+          Up
+        </ion-item>
+      </ion-list> -->
+    </div>
+  </ion-content>
+

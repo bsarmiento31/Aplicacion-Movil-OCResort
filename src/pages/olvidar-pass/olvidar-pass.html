@@ -1,0 +1,47 @@
+
+<ion-header no-border>
+    <ion-navbar no-border-bottom color="header">
+      <ion-title>
+        
+      </ion-title>
+    </ion-navbar>
+
+    
+  
+  </ion-header> 
+
+
+<ion-content class="masters">
+
+    <ion-row text-center color="header">
+        <ion-col>
+
+            <img src="../assets/imgs/logo2.png" class="top-30">
+            
+          </ion-col>
+    </ion-row>
+
+    <form (ngSubmit)="onSubmitPassword(u)" #u="ngForm">
+        <ion-row text-center>
+            <ion-col col-1></ion-col>
+            <ion-col col-10>
+            <ion-item class="mastersmargin">
+                <ion-label color="primary"><ion-icon item-left name="mail" color="label"></ion-icon></ion-label>
+                <ion-input placeholder="Email Address" #correo="ngModel" type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [(ngModel)]="usuario.email" required ></ion-input>
+            </ion-item>
+            <!-- <ion-label color="light" *ngIf="u.submitted && u.controls['email'].errors">El email es obligatorio</ion-label> -->
+            <ion-label color="light" *ngIf="u.submitted && u.controls['email'].errors">El email es obligatorio</ion-label>
+            <ion-label color="light" *ngIf="correo.errors?.pattern">El campo no tiene formato de correo</ion-label>
+            <button ion-button block color="header" [disabled]="u.form.invalid && correo.errors" class="buttontop">Restablecer Contraseña</button>
+
+          </ion-col>
+          <ion-col col-1></ion-col>
+        </ion-row>
+       
+
+    </form>
+
+
+
+ 
+</ion-content>

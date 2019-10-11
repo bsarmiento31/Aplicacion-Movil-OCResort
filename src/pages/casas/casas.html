@@ -1,0 +1,94 @@
+<!--
+  Generated template for the CasasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>casas</ion-title>
+  </ion-navbar>
+
+</ion-header> 
+ 
+<!-- [ngStyle]="{'background-image': 'url(' + slide.image +')','background-size': 'cover'}"-->
+<ion-content padding>
+<ion-row>
+  <ion-slides  effect="fade" direction="horizontal" speed="800" loop="true">  
+        <ion-slide *ngFor="let slide of slider">
+              <div style="position: absolute;top: 70%;right: 15px;font-size: 25px;z-index: 2;color:white;">
+                  <button ion-button color="botones" class="round2" (click)="irAInfo( slide )">
+                      <span>Escoger</span>
+                  </button>
+              </div>
+          <ion-toolbar end></ion-toolbar> 
+          <h2 class="sinterraza">{{ slide.title }}</h2>
+          <p>{{ slide.description }}</p>
+          <img [src]="slide.image">   
+        </ion-slide>
+       
+  </ion-slides>
+
+  <ion-slides  effect="fade" direction="horizontal" speed="800" loop="true">  
+    <ion-slide *ngFor="let slide2 of slider2alcobasterr">
+          <div style="position: absolute;top: 70%;right: 15px;font-size: 25px;z-index: 2;color:white;">
+              <button ion-button color="botones2al" class="round2" (click)="ir2casa()">
+                  <span>Escoger</span>
+              </button>
+          </div> 
+      <ion-toolbar end></ion-toolbar> 
+      <h2 class="terraza">{{ slide2.title }}</h2>
+      <p>{{ slide2.description }}</p>
+      <img [src]="slide2.image">   
+    </ion-slide>
+   
+</ion-slides>
+
+
+<ion-slides  effect="fade" direction="horizontal" speed="800" loop="true">  
+    <ion-slide *ngFor="let slide3 of slider3alcobas">
+          <div style="position: absolute;top: 70%;right: 15px;font-size: 25px;z-index: 2;color:white;">
+              <button ion-button color="botones3al" class="round2" (click)="ir3casa()">
+                  <span>Escoger</span>
+              </button>
+          </div> 
+      <ion-toolbar end></ion-toolbar> 
+      <h2 class="terraza">{{ slide3.title }}</h2>
+      <p>{{ slide3.description }}</p>
+      <img [src]="slide3.image">   
+    </ion-slide>
+   
+</ion-slides>
+
+<ion-slides  effect="fade" direction="horizontal" speed="800" loop="true">  
+    <ion-slide *ngFor="let slide4 of slider3alcobasmasterraza">
+          <div style="position: absolute;top: 70%;right: 15px;font-size: 25px;z-index: 2;color:white;">
+              <button ion-button color="botones3al" class="round2" (click)="ir3casaterraza()">
+                  <span>Escoger</span>
+              </button>
+          </div> 
+      <ion-toolbar end></ion-toolbar> 
+      <h2 class="terraza">{{ slide4.title }}</h2>
+      <p>{{ slide4.description }}</p> 
+      <img [src]="slide4.image">   
+    </ion-slide>
+   
+</ion-slides>
+
+<ion-slides  effect="fade" direction="horizontal" speed="800" loop="true">  
+    <ion-slide *ngFor="let slide5 of slider4alcobas">
+          <div style="position: absolute;top: 70%;right: 15px;font-size: 25px;z-index: 2;color:white;">
+              <button ion-button color="botones4al" class="round2" (click)="ir4casa()">
+                  <span>Escoger</span>
+              </button>
+          </div> 
+      <ion-toolbar end></ion-toolbar> 
+      <h2 class="terraza">{{ slide5.title }}</h2>
+      <p>{{ slide5.description }}</p>
+      <img [src]="slide5.image">   
+    </ion-slide>
+   
+</ion-slides>
+</ion-row>
+</ion-content>
